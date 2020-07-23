@@ -3,20 +3,20 @@ package junit5.tdd;
 public class FizzBuzz {
 
     public String play(int number){
-        String result = "";
+        StringBuilder result = new StringBuilder();
         if (number % 3 == 0) {
-            result += "Fizz";
+            result.append("Fizz");
         }
         if (number % 5 == 0) {
-            result += "Buzz";
+            result.append("Buzz");
         }
         if (number % 7 == 0) {
-            result += "Whizz";
+            result.append("Whizz");
         }
 
-        if (result.isEmpty()) {
+        if (result.toString().isEmpty()) {
             return String.valueOf(number);
         }
-        return result;
+        return result.toString();
     }
 }
